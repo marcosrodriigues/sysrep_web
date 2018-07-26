@@ -61,7 +61,6 @@ export class ValorPresidenciaComponent implements AfterViewInit {
     [
         {
             type: 'splinearea',
-            columnsGapPercent: 50,
             alignEndPointsWithIntervals: true,
             series: [
               { dataField: '2017', displayText: '2017', opacity: 1, lineWidth: 2, symbolType: 'squad', fillColorSymbolSelected: 'yellow' },  
