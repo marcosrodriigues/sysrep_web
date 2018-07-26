@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var $: any;
 
@@ -9,13 +10,19 @@ declare var $: any;
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.init();
+  }
+
+  init() {
     $('.js-tilt').tilt({
 			scale: 1.1
 		})
+  }  
 
+  login(){
+    this.router.navigateByUrl('/dashboard');
   }
-
 }

@@ -8,24 +8,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-  
+  <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="assets/css/skins/_all-skins.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body>
-  <app-root></app-root>
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <app-root></app-root>
+  </div>
 </body>
 </html>
 
 <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--<script src="assets/vendor/bootstrap/js/popper.js"></script>-->
 <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--<script src="assets/vendor/select2/select2.min.js"></script>-->
-<!--<script src="assets/vendor/tilt/tilt.jquery.min.js"></script>-->
+<script src="assets/js/adminlte.min.js"></script>
 
-<script src="assets/js/main.js"></script>
+<script src="https://colorlib.com/polygon/vendors/nprogress/nprogress.js"></script>
+<script src="https://colorlib.com/polygon/vendors/echarts/dist/echarts.js"></script>
+
+<script>
+  var echartLine = echarts.init($('#echart_line'));
+  
+  echartLine.setOption({
+  title: {
+    text: 'Line Graph',
+    subtext: 'Subtitle'
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    x: 220,
+    y: 40,
+    data: ['Intent', 'Pre-order', 'Deal']
+  },
+  toolbox: {
+    show: true,
+    feature: {
+    magicType: {
+      show: true,
+      title: {
+      line: 'Line',
+      bar: 'Bar',
+      stack: 'Stack',
+      tiled: 'Tiled'
+      },
+      type: ['line', 'bar', 'stack', 'tiled']
+    },
+    restore: {
+      show: true,
+      title: "Restore"
+    },
+    saveAsImage: {
+      show: true,
+      title: "Save Image"
+    }
+    }
+  },
+  calculable: true,
+  xAxis: [{
+    type: 'category',
+    boundaryGap: false,
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  }],
+  yAxis: [{
+    type: 'value'
+  }],
+  series: [{
+    name: 'Deal',
+    type: 'line',
+    smooth: true,
+    itemStyle: {
+    normal: {
+      areaStyle: {
+      type: 'default'
+      }
+    }
+    },
+    data: [10, 12, 21, 54, 260, 830, 710]
+  }, {
+    name: 'Pre-order',
+    type: 'line',
+    smooth: true,
+    itemStyle: {
+    normal: {
+      areaStyle: {
+      type: 'default'
+      }
+    }
+    },
+    data: [30, 182, 434, 791, 390, 30, 10]
+  }, {
+    name: 'Intent',
+    type: 'line',
+    smooth: true,
+    itemStyle: {
+    normal: {
+      areaStyle: {
+      type: 'default'
+      }
+    }
+    },
+    data: [1320, 1132, 601, 234, 120, 90, 20]
+  }]
+  });
+  </script>
