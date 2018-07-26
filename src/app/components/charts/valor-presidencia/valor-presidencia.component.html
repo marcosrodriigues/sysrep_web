@@ -14,10 +14,10 @@
     <div class="box-body">
         <jqxChart #chartPresidencia
         [width]="auto" [height]="500" [colorScheme]="'scheme05'"
-        [title]="'PRESIDÊNCIA'" [enableAxisTextAnimation]="false"
+        [title]="'PRESIDÊNCIA'" [enableAxisTextAnimation]="true"
         [description]="'Balanço da presidência'" [animationDuration]="1000"
-        [showLegend]="false" [enableAnimations]="true" 
-         [source]="data" [xAxis]="xAxis"
+        [showLegend]="true" [enableAnimations]="true" 
+        [source]="data" [xAxis]="xAxis"
         [valueAxis]="valueAxis" [seriesGroups]="seriesGroups">
       </jqxChart>
     </div>

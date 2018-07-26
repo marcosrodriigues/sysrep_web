@@ -35,38 +35,35 @@ export class ValorPresidenciaComponent implements AfterViewInit {
     { Mês: 'Dezembro', 2018: 270, 2017: 350 }
   ];
 
-  padding: any = { left: 5, top: 5, right: 5, bottom: 5 };
+  xAxis: any =
+  {
+    dataField: 'Mês',
+    unitInterval: 1,
+    tickMarks: { visible: true, interval: 1 },
+    gridLinesInterval: { visible: true, interval: 1 },
+    valuesOnTicks: false,
+    padding: { bottom: 10 }
+  };
 
-    titlePadding: any = { left: 0, top: 0, right: 0, bottom: 10 };
+  valueAxis: any =
+  {
+      minValue: 0,
+      maxValue: 1000,
+      title: { text: 'Valor em R$' },
+      labels: { formatSettings: { prefix : "RS ", sufix: ",00" } }
+  };
 
-    xAxis: any =
-    {
-      dataField: 'Mês',
-      unitInterval: 1,
-      tickMarks: { visible: true, interval: 1 },
-      gridLinesInterval: { visible: true, interval: 1 },
-      valuesOnTicks: false,
-      padding: { bottom: 10 }
-    };
-
-    valueAxis: any =
-    {
-        minValue: 0,
-        maxValue: 1000,
-        title: { text: 'Valor em R$' },
-        labels: { formatSettings: { prefix : "RS ", sufix: ",00" } }
-    };
-
-    seriesGroups: any[] =
-    [
-        {
-            type: 'splinearea',
-            alignEndPointsWithIntervals: true,
-            series: [
-              { dataField: '2017', displayText: '2017', opacity: 1, lineWidth: 2, symbolType: 'squad', fillColorSymbolSelected: 'yellow' },  
-              { dataField: '2018', displayText: '2018', opacity: 0.7, lineWidth: 2, symbolType: 'circle', fillColorSymbolSelected: 'red' },
-            ]
-        }
-    ];
+  seriesGroups: any[] =
+  [
+      {
+          type: 'splinearea',
+          columnsGapPercent: 50,
+          alignEndPointsWithIntervals: true,
+          series: [
+            { dataField: '2017', displayText: '2017', opacity: 1, lineWidth: 2, fillColorSymbolSelected: 'yellow' },  
+            { dataField: '2018', displayText: '2018', opacity: 0.7, lineWidth: 2, fillColorSymbolSelected: 'red' }
+          ]
+      }
+  ];
 
 }
