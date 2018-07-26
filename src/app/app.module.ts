@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { LeftSideComponent } from './components/left-side/left-side.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ControlSidebarComponent } from './components/control-sidebar/control-sidebar.component';
+import { jqxChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxchart';
+import { ValorPresidenciaComponent } from './components/charts/valor-presidencia/valor-presidencia.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ControlSidebarComponent } from './components/control-sidebar/control-si
     LeftSideComponent,
     FooterComponent,
     ControlSidebarComponent,
+    jqxChartComponent,
+    ValorPresidenciaComponent
   ],
   imports: [
     RoutingModule,
