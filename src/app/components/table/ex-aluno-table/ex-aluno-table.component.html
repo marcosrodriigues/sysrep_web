@@ -1,0 +1,18 @@
+<table id="datatable" class="row-border hover">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Apelido</th>
+      <th>Email</th>
+      <th>Telefone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ex of exalunos; let i = index;">
+      <td>{{ex.nome}}</td>
+      <td>{{ex.apelido}}</td>
+      <td>{{ex.email}}</td>
+      <td>{{ex.phone}}</td>
+    </tr>
+  </tbody>
+</table>

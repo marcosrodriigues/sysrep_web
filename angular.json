@@ -24,12 +24,20 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.css"
+              "node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.css",
+              "src/assets/styles/bootstrap.min.css",
+              "src/assets/styles/font-awesome.min.css",
+              "src/assets/styles/primeng.css",
+              "src/assets/styles/theme.css"
+              
+              
             ],
             "scripts": [
               "src/assets/vendor/jquery/jquery-3.2.1.min.js",
               "src/assets/vendor/tilt/tilt.jquery.min.js",
-              "src/assets/vendor/bootstrap/js/popper.min.js"
+              "src/assets/vendor/bootstrap/js/popper.min.js",
+              "node_modules/datatables.net/js/jquery.dataTables.min.js",
+              "src/assets/plugins/datatable/datatable.min.js"
             ]
           },
           "configurations": {

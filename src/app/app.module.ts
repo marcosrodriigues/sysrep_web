@@ -12,6 +12,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ControlSidebarComponent } from './components/control-sidebar/control-sidebar.component';
 import { jqxChartComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxchart';
 import { ValorPresidenciaComponent } from './components/charts/valor-presidencia/valor-presidencia.component';
+import { DefaultTableComponent } from './components/table/default-table/default-table.component';
+import { ListagemExalunoComponent } from './pages/exaluno/listagem-exaluno/listagem-exaluno.component';
+import { ListagemHomenageadoComponent } from './pages/homenageado/listagem-homenageado/listagem-homenageado.component';
+import { TreeTableModule } from 'ng-treetable';
+import { ListagemAmigoComponent } from './pages/amigo/listagem-amigo/listagem-amigo.component';
+import { ExAlunoTableComponent } from './components/table/ex-aluno-table/ex-aluno-table.component'
 
 @NgModule({
   declarations: [
@@ -24,11 +30,17 @@ import { ValorPresidenciaComponent } from './components/charts/valor-presidencia
     FooterComponent,
     ControlSidebarComponent,
     jqxChartComponent,
-    ValorPresidenciaComponent
+    ValorPresidenciaComponent,
+    DefaultTableComponent,
+    ListagemExalunoComponent,
+    ListagemHomenageadoComponent,
+    ListagemAmigoComponent,
+    ExAlunoTableComponent,
   ],
   imports: [
     RoutingModule,
-    BrowserModule
+    BrowserModule,
+    TreeTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
