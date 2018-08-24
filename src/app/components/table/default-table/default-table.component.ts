@@ -11,148 +11,36 @@ declare var $: any;
 export class DefaultTableComponent implements OnInit {
 
   @Input() columns: any = [];
-  //@Input() data: any = [];
-
-  data: any[] = [  
-    {  
-      "data":{  
-        "name":"Andrew",
-        "gender":"Male"
-      },
-      "children":[
-        {  
-          "data":{  
-            "name":"Andrewson",
-            "gender":"Male"
-          },
-          "children":[  
-            {  
-              "data":{  
-                "name":"Eric",
-                "gender":"Male"
-              }
-            }                       
-          ]
-        }
-      ]
-    },
-    {  
-      "data":{  
-        "name":"Andrew",
-        "gender":"Male"
-      },
-      "children":[
-        {  
-          "data":{  
-            "name":"Andrewson",
-            "gender":"Male"
-          },
-          "children":[  
-            {  
-              "data":{  
-                "name":"Eric",
-                "gender":"Male"
-              }
-            }                       
-          ]
-        }
-      ]
-    },
-    {  
-      "data":{  
-        "name":"Andrew",
-        "gender":"Male"
-      },
-      "children":[
-        {  
-          "data":{  
-            "name":"Andrewson",
-            "gender":"Male"
-          },
-          "children":[  
-            {  
-              "data":{  
-                "name":"Eric",
-                "gender":"Male"
-              }
-            }                       
-          ]
-        }
-      ]
-    },
-    {  
-      "data":{  
-        "name":"Andrew",
-        "gender":"Male"
-      },
-      "children":[
-        {  
-          "data":{  
-            "name":"Andrewson",
-            "gender":"Male"
-          },
-          "children":[  
-            {  
-              "data":{  
-                "name":"Eric",
-                "gender":"Male"
-              }
-            }                       
-          ]
-        }
-      ]
-    },
-    {  
-      "data":{  
-        "name":"Andrew",
-        "gender":"Male"
-      },
-      "children":[
-        {  
-          "data":{  
-            "name":"Andrewson",
-            "gender":"Male"
-          },
-          "children":[  
-            {  
-              "data":{  
-                "name":"Eric",
-                "gender":"Male"
-              }
-            }                       
-          ]
-        }
-      ]
-    },
-    {  
-      "data":{  
-        "name":"Andrew",
-        "gender":"Male"
-      },
-      "children":[
-        {  
-          "data":{  
-            "name":"Andrewson",
-            "gender":"Male"
-          },
-          "children":[  
-            {  
-              "data":{  
-                "name":"Marcos",
-                "gender":"Male"
-              }
-            }                       
-          ]
-        }
-      ]
-    },
-  ]
-
+  @Input() data: any = [];
 
   constructor() { 
   }
 
   ngOnInit() {
    
+  }
+
+  click() {
+    this.columns.push("Novo");
+  }
+
+  onNodeSelect() {
+    console.log('Node select');
+  }
+
+  onNodeUnselect() {
+    console.log('Node unselect');
+  }
+
+  onNodeExpand() {
+    console.log('Node expand');
+  }
+
+  onNodeCollapse() {
+    console.log('Node collapse');
+  }
+
+  onContextMenuSelect() {
+    console.log('Context menu select');
   }
 }
