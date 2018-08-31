@@ -1,10 +1,16 @@
 <div class="row">
   <div class="col-sm-12">
-    <div class="col-sm-4 pull-right">
+    <div class="col-sm-4 pull-left">
         <input #gb type="text" class="form-control" pInputText placeholder="Pesquise por qualquer campo da tabela">
+    </div>
+    <div class="col-sm-1 pull-right">
+      <a class="btn btn-primary">
+        <i class="glyphicon glyphicon-plus"></i> Novo
+      </a>
     </div>
   </div>
 </div>
+<div class="clear"></div>
 <div class="row">
   <div class="col-sm-12">
       <ay-treeTable [globalFilter]="gb" [value]="data" [styleClass]="table-border"

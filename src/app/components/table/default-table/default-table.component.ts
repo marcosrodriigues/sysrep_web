@@ -12,16 +12,13 @@ export class DefaultTableComponent implements OnInit {
 
   @Input() columns: any = [];
   @Input() data: any = [];
+  @Input() baseUrl: string = "";
 
   constructor() { 
   }
 
   ngOnInit() {
    
-  }
-
-  click() {
-    this.columns.push("Novo");
   }
 
   onNodeSelect() {
