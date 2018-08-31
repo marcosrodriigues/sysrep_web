@@ -24,10 +24,10 @@
 
         <ay-column header="Opções" field="id" >
           <ng-template let-col let-node="rowData" pTemplate="body">
-            <a href="{{node.edit}}">
+            <a (click)="edit(node.data.id)">
               <i class="glyphicon glyphicon-pencil lightgreen"> </i>    
             </a>
-            <a href="{{node.remove}}" style="margin-left: 15px;">
+            <a (click)="remove(node.data.id)" style="margin-left: 15px;">
               <i class="glyphicon glyphicon-minus red"> </i>    
             </a>
           </ng-template>

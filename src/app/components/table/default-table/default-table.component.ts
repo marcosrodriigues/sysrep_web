@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var $: any;
 
@@ -12,9 +13,9 @@ export class DefaultTableComponent implements OnInit {
 
   @Input() columns: any = [];
   @Input() data: any = [];
-  @Input() baseUrl: string = "";
+  @Input() section: string = "";
 
-  constructor() { 
+  constructor(private router : Router) { 
   }
 
   ngOnInit() {
@@ -40,4 +41,13 @@ export class DefaultTableComponent implements OnInit {
   onContextMenuSelect() {
     console.log('Context menu select');
   }
+
+  edit(id) {
+    this.router.navigateByUrl(`${this.section}/${id}`);
+  }
+
+  remove(id) {
+    console.log(id);
+  }
+
 }

@@ -8,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ListagemExalunoComponent implements OnInit {
 
   colunas: any = ["name", "gender"];
-
   data: any[] = [  
-    { "data":{  name:"Andrew", gender:"Male", id: 15  }, "edit" : "http://", "remove" : "" },
+    { "data":{  name:"Andrew", gender:"Male", id: 15  } },
     { "data":{  "name":"Andrew", "gender":"Male", "id": 2  } },
     { "data":{  "name":"Andrew", "gender":"Male", "id": 3  } },
     { "data":{  "name":"Andrew", "gender":"Male", "id": 4  } },
@@ -20,11 +19,20 @@ export class ListagemExalunoComponent implements OnInit {
     { "data":{  "name":"Andrew", "gender":"Male", "id": 8  } },
     { "data":{  "name":"Andrew", "gender":"Male", "id": 9  } },
     { "data":{  "name":"Andrew", "gender":"Male", "id": 10  } },
-  ]
+  ];
+  section: string = 'ex-aluno';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  edit(id) {
+    console.log(id);
+  }
+
+  remove(id) {
+    console.log(id);
   }
 
 }
