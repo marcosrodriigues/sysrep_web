@@ -17,7 +17,8 @@ import { ListagemExalunoComponent } from './pages/exaluno/listagem-exaluno/lista
 import { ListagemHomenageadoComponent } from './pages/homenageado/listagem-homenageado/listagem-homenageado.component';
 import { TreeTableModule } from 'ng-treetable';
 import { ListagemAmigoComponent } from './pages/amigo/listagem-amigo/listagem-amigo.component';
-import { ExAlunoTableComponent } from './components/table/ex-aluno-table/ex-aluno-table.component'
+import { ExAlunoTableComponent } from './components/table/ex-aluno-table/ex-aluno-table.component';
+import { VisualizarExalunoComponent } from './pages/exaluno/visualizar-exaluno/visualizar-exaluno.component'
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ExAlunoTableComponent } from './components/table/ex-aluno-table/ex-alun
     ListagemHomenageadoComponent,
     ListagemAmigoComponent,
     ExAlunoTableComponent,
+    VisualizarExalunoComponent,
   ],
   imports: [
     RoutingModule,

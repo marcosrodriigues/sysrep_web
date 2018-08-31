@@ -43,7 +43,8 @@ export class DefaultTableComponent implements OnInit {
   }
 
   edit(id) {
-    this.router.navigateByUrl(`${this.section}/${id}`);
+    //this.router.navigate
+    //this.router.navigate[section];
   }
 
   remove(id) {

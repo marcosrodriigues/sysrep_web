@@ -24,7 +24,7 @@
 
         <ay-column header="Opções" field="id" >
           <ng-template let-col let-node="rowData" pTemplate="body">
-            <a (click)="edit(node.data.id)">
+            <a [routerLink]="[node.data.id]">
               <i class="glyphicon glyphicon-pencil lightgreen"> </i>    
             </a>
             <a (click)="remove(node.data.id)" style="margin-left: 15px;">

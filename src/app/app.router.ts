@@ -5,10 +5,12 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ListagemExalunoComponent } from './pages/exaluno/listagem-exaluno/listagem-exaluno.component';
 import { ListagemHomenageadoComponent } from './pages/homenageado/listagem-homenageado/listagem-homenageado.component';
 import { ListagemAmigoComponent } from './pages/amigo/listagem-amigo/listagem-amigo.component';
+import { VisualizarExalunoComponent } from './pages/exaluno/visualizar-exaluno/visualizar-exaluno.component';
 
 const routes: Routes = [
     { path: '', component: LoginComponent },
     { path: 'ex-aluno', component: ListagemExalunoComponent, pathMatch: 'full' },
+    { path: 'ex-aluno/:id', component: VisualizarExalunoComponent, pathMatch: 'full' },       
     { path: 'homenageado', component: ListagemHomenageadoComponent, pathMatch: 'full' },
     { path: 'amigo', component: ListagemAmigoComponent, pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' },
