@@ -9,18 +9,25 @@ import { VisualizarExalunoComponent } from './pages/exaluno/visualizar-exaluno/v
 import { NovoExalunoComponent } from './pages/exaluno/novo-exaluno/novo-exaluno.component';
 import { NovoHomenageadoComponent } from './pages/homenageado/novo-homenageado/novo-homenageado.component';
 import { VisualizarHomenageadoComponent } from './pages/homenageado/visualizar-homenageado/visualizar-homenageado.component';
+import { ListagemCaixinhaComponent } from './pages/caixinha/listagem-caixinha/listagem-caixinha.component';
+import { NovoCaixinhaComponent } from './pages/caixinha/novo-caixinha/novo-caixinha.component';
+import { VisualizarCaixinhaComponent } from './pages/caixinha/visualizar-caixinha/visualizar-caixinha.component';
 
 const routes: Routes = [
     { path: '', component: LoginComponent },
 
     { path: 'ex-aluno', component: ListagemExalunoComponent, pathMatch: 'full' },
+    { path: 'ex-aluno/novo', component: NovoExalunoComponent, pathMatch: 'full' },       
     { path: 'ex-aluno/:id', component: VisualizarExalunoComponent, pathMatch: 'full' },       
-    { path: 'ex-aluno/novo', component: VisualizarExalunoComponent, pathMatch: 'full' },       
 
     { path: 'homenageado', component: ListagemHomenageadoComponent, pathMatch: 'full' },
-    { path: 'homenageado/:id', component: VisualizarHomenageadoComponent, pathMatch: 'full' },
     { path: 'homenageado/novo', component: NovoHomenageadoComponent, pathMatch: 'full' },
+    { path: 'homenageado/:id', component: VisualizarHomenageadoComponent, pathMatch: 'full' },
     
+    { path: 'caixinha', component: ListagemCaixinhaComponent, pathMatch: 'full' },
+    { path: 'caixinha/novo', component: NovoCaixinhaComponent, pathMatch: 'full' },
+    { path: 'caixinha/:id', component: VisualizarCaixinhaComponent, pathMatch: 'full' },
+
     { path: 'amigo', component: ListagemAmigoComponent, pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' },
     { path: '**', component: NotfoundComponent, pathMatch: 'full' }

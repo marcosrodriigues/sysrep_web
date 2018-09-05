@@ -23,7 +23,11 @@ import { NovoExalunoComponent } from './pages/exaluno/novo-exaluno/novo-exaluno.
 import { ExalunoComponent } from './components/forms/exaluno/exaluno.component';
 import { HomenageadoComponent } from './components/forms/homenageado/homenageado.component';
 import { NovoHomenageadoComponent } from './pages/homenageado/novo-homenageado/novo-homenageado.component';
-import { VisualizarHomenageadoComponent } from './pages/homenageado/visualizar-homenageado/visualizar-homenageado.component'
+import { VisualizarHomenageadoComponent } from './pages/homenageado/visualizar-homenageado/visualizar-homenageado.component';
+import { ListagemCaixinhaComponent } from './pages/caixinha/listagem-caixinha/listagem-caixinha.component';
+import { NovoCaixinhaComponent } from './pages/caixinha/novo-caixinha/novo-caixinha.component';
+import { VisualizarCaixinhaComponent } from './pages/caixinha/visualizar-caixinha/visualizar-caixinha.component';
+import { CaixinhaComponent } from './components/forms/caixinha/caixinha.component'
 
 @NgModule({
   declarations: [
@@ -48,6 +52,10 @@ import { VisualizarHomenageadoComponent } from './pages/homenageado/visualizar-h
     HomenageadoComponent,
     NovoHomenageadoComponent,
     VisualizarHomenageadoComponent,
+    ListagemCaixinhaComponent,
+    NovoCaixinhaComponent,
+    VisualizarCaixinhaComponent,
+    CaixinhaComponent,
   ],
   imports: [
     RoutingModule,
