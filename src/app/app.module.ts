@@ -18,7 +18,12 @@ import { ListagemHomenageadoComponent } from './pages/homenageado/listagem-homen
 import { TreeTableModule } from 'ng-treetable';
 import { ListagemAmigoComponent } from './pages/amigo/listagem-amigo/listagem-amigo.component';
 import { ExAlunoTableComponent } from './components/table/ex-aluno-table/ex-aluno-table.component';
-import { VisualizarExalunoComponent } from './pages/exaluno/visualizar-exaluno/visualizar-exaluno.component'
+import { VisualizarExalunoComponent } from './pages/exaluno/visualizar-exaluno/visualizar-exaluno.component';
+import { NovoExalunoComponent } from './pages/exaluno/novo-exaluno/novo-exaluno.component';
+import { ExalunoComponent } from './components/forms/exaluno/exaluno.component';
+import { HomenageadoComponent } from './components/forms/homenageado/homenageado.component';
+import { NovoHomenageadoComponent } from './pages/homenageado/novo-homenageado/novo-homenageado.component';
+import { VisualizarHomenageadoComponent } from './pages/homenageado/visualizar-homenageado/visualizar-homenageado.component'
 
 @NgModule({
   declarations: [
@@ -38,6 +43,11 @@ import { VisualizarExalunoComponent } from './pages/exaluno/visualizar-exaluno/v
     ListagemAmigoComponent,
     ExAlunoTableComponent,
     VisualizarExalunoComponent,
+    NovoExalunoComponent,
+    ExalunoComponent,
+    HomenageadoComponent,
+    NovoHomenageadoComponent,
+    VisualizarHomenageadoComponent,
   ],
   imports: [
     RoutingModule,

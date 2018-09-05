@@ -1,3 +1,25 @@
-<p>
-  listagem-homenageado works!
-</p>
+<app-header></app-header>
+<app-left-side></app-left-side>
+
+<div class="content-wrapper">
+  <section class="content-header">
+    <h1>
+      Homenageado
+      <small>Listagem</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><i class="fa fa-user active"></i> Homenageado</li>
+    </ol>
+  </section>
+
+  <section class="content container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <app-default-table [data]="data" [columns]="colunas" [section]="section"></app-default-table>
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-footer></app-footer>
+<app-control-sidebar></app-control-sidebar>

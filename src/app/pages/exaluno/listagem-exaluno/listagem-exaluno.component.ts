@@ -27,12 +27,4 @@ export class ListagemExalunoComponent implements OnInit {
   ngOnInit() {
   }
 
-  edit(id) {
-    console.log(id);
-  }
-
-  remove(id) {
-    console.log(id);
-  }
-
 }

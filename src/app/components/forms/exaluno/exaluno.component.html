@@ -1,0 +1,222 @@
+<form class="form-horizontal" method="POST">
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">Informações gerais</h3>
+
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="box-body">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="nome">Nome*</label>
+            <div class="col-sm-10">
+              <input type="text" name="nome" id="nome" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="telefone">Telefone*</label>
+            <div class="col-sm-4">
+              <div *ngFor="let t of exaluno.telefone; let i = index">
+                <div class="row" [ngClass]="i != 0 ? 'heigth-plus-button' : ''">
+                  <div class="col-sm-9">
+                    <input type="phone" name="telefone_{{i}}" id="telefone_{{id}}" class="form-control">
+                  </div>
+                  <div class="col-sm-1" *ngIf="i == 0" (click)="addTelefone()">
+                    <span class="btn btn-primary fa fa-plus"></span>
+                  </div>
+                  <div class="col-sm-1" *ngIf="i != 0" (click)="removeTelefone(t)">
+                    <span class="btn btn-danger fa fa-minus"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label class="col-sm-2 control-label" for="telefone">Email*</label>
+            <div class="col-sm-4">
+              <div *ngFor="let e of exaluno.email; let i = index">
+                <div class="row" [ngClass]="i != 0 ? 'heigth-plus-button' : ''">
+                  <div class="col-sm-9">
+                    <input type="email" name="email_{{i}}" id="email_{{id}}" class="form-control">
+                  </div>
+                  <div class="col-sm-1" *ngIf="i == 0" (click)="addEmail()">
+                    <span class="btn btn-primary fa fa-plus"></span>
+                  </div>
+                  <div class="col-sm-1" *ngIf="i != 0" (click)="removeEmail(e)">
+                    <span class="btn btn-danger fa fa-minus"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="nascimento">Nascimento*</label>
+            <div class="col-sm-10">
+              <input type="text" name="nascimento" id="nascimento" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="col-sm-12">
+            <img src="/assets/image/avatar.png" >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">Residência</h3>
+
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="box-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label class="col-sm-1 control-label" for="cep">CEP</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" name="cep" id="cep">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label class="col-sm-1 control-label" for="rua">Rua</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="rua" id="rua">
+            </div>
+
+            <label class="col-sm-1 control-label" for="numero">Nº</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" name="numero" id="numero">
+            </div>
+
+            <label class="col-sm-1 control-label" for="bairro">Bairro</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" name="bairro" id="bairro">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-1 control-label" for="complemento">Compl.</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" name="complemento" id="complemento">
+            </div>
+
+            <label class="col-sm-1 control-label" for="complemento">Cidade.</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" name="cidade" id="cidade">
+            </div>
+
+            <label class="col-sm-1 control-label" for="estado">Estado.</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" name="estado" id="estado">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">República
+        <small>Ex-aluno de República Maternidade</small>
+      </h3>
+
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="box-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label class="control-label col-sm-1" for="apelido">Apelido</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" name="apelido" id="apelido">
+            </div>
+            
+            <label class="col-sm-1 control-label" for="curso">Curso</label>
+            <div class="col-sm-3">
+              <input type="text" name="curso" id="curso" class="form-control">
+            </div>
+
+            <label class="col-sm-1 control-label" for="formatura">Formatura</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" id="formatura" name="formatura">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">Segurança</h3>
+
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="box-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label class="control-label col-sm-1" for="email">Email</label>
+            <div class="col-sm-5">
+              <input type="text" name="email" id="email" class="form-control">
+            </div>
+
+            <label class="control-label col-sm-1" for="confirmEmail">Confirmação</label>
+            <div class="col-sm-5">
+              <input type="text" name="confirmEmail" id="confirmEmail" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-1" for="login">Senha</label>
+            <div class="col-sm-5">
+              <input type="password" name="senha" id="senha" class="form-control">
+            </div>
+
+            <label class="control-label col-sm-1" for="confirmSenha">Confirmação</label>
+            <div class="col-sm-5">
+              <input type="password" name="confirmSenha" id="confirmSenha" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="pull-right">
+        <button class="btn btn-primary">Salvar</button> 
+      </div>
+    </div>
+  </div>
+</form>
