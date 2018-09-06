@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   }  
 
   login(){
-    this.router.navigateByUrl('/dashboard');
+    console.log('bye');
+    this.router.navigate(['/dashboard']);
   }
 }
