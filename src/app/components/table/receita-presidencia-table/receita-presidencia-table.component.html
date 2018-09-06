@@ -1,0 +1,24 @@
+  <div class="row">
+    <div class="col-sm-12">
+        <ay-treeTable [value]="data" [styleClass]="table-border"
+            [paginator]="true" [rows]="10" [pageLinks]="3" [rowsPerPageOptions]="[5, 10, 20]"
+            [totalRecords]="5" [immutable]="true"
+            (onNodeSelect)="onNodeSelect()" (onNodeUnselect)="onNodeUnselect()"
+            (onNodeExpand)="onNodeExpand()" (onNodeCollapse)="onNodeCollapse()"
+            (onContextMenuSelect)="onContextMenuSelect()">
+  
+          <ay-column *ngFor="let c of columns" field="{{c}}" header="{{c.charAt(0).toUpperCase() + c.substring(1)}}"></ay-column>
+  
+          <ay-column header="Opções" field="id" >
+            <ng-template let-col let-node="rowData" pTemplate="body">
+              <a [routerLink]="[node.data.id]">
+                <i class="glyphicon glyphicon-pencil lightgreen"> </i>    
+              </a>
+              <a (click)="remove(node.data.id)" style="margin-left: 15px;">
+                <i class="glyphicon glyphicon-minus red"> </i>    
+              </a>
+            </ng-template>
+          </ay-column>
+        </ay-treeTable>
+    </div>
+  </div>

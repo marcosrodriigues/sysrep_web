@@ -27,7 +27,8 @@ import { VisualizarHomenageadoComponent } from './pages/homenageado/visualizar-h
 import { ListagemCaixinhaComponent } from './pages/caixinha/listagem-caixinha/listagem-caixinha.component';
 import { NovoCaixinhaComponent } from './pages/caixinha/novo-caixinha/novo-caixinha.component';
 import { VisualizarCaixinhaComponent } from './pages/caixinha/visualizar-caixinha/visualizar-caixinha.component';
-import { CaixinhaComponent } from './components/forms/caixinha/caixinha.component'
+import { CaixinhaComponent } from './components/forms/caixinha/caixinha.component';
+import { ReceitaPresidenciaTableComponent } from './components/table/receita-presidencia-table/receita-presidencia-table.component'
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { CaixinhaComponent } from './components/forms/caixinha/caixinha.componen
     NovoCaixinhaComponent,
     VisualizarCaixinhaComponent,
     CaixinhaComponent,
+    ReceitaPresidenciaTableComponent,
   ],
   imports: [
     RoutingModule,

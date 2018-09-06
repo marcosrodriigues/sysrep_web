@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-caixinha',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaixinhaComponent implements OnInit {
 
+  @Input() edit: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  save() {
+    console.log("Salvo");
   }
 
 }

@@ -16,7 +16,95 @@
   <section class="content container-fluid">
     <div class="row">
       <div class="col-sm-12">
-        <app-caixinha></app-caixinha>
+        <app-caixinha [edit]="true"></app-caixinha>
+      </div>
+    </div>
+
+    <div class="box box-info col-sm-6">
+      <div class="box-header with-border">
+        <h3 class="box-title">Receitas</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse">
+              <i class="fa fa-minus"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="box-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <app-receita-presidencia-table [data]="data" [columns]="colunas" [section]="section">
+              wait a second
+            </app-receita-presidencia-table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box box-info col-sm-6">
+      <div class="box-header with-border">
+        <h3 class="box-title">Gráfico de receitas</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse">
+              <i class="fa fa-minus"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="box-body">
+        <div class="row">
+          <div class="col-sm-12">
+            Aqui entra o grafico
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="box box-info col-sm-6">
+          <div class="box-header with-border">
+            <h3 class="box-title">Despesas</h3>
+    
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                  <i class="fa fa-minus"></i>
+              </button>
+            </div>
+          </div>
+    
+          <div class="box-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <app-receita-presidencia-table [data]="data" [columns]="colunas" [section]="section">
+                  wait a second
+                </app-receita-presidencia-table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box box-info col-sm-6">
+            <div class="box-header with-border">
+              <h3 class="box-title">Gráfico de despesas</h3>
+      
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+              </div>
+            </div>
+      
+            <div class="box-body">
+              <div class="row">
+                <div class="col-sm-12">
+                  Aqui entra o grafico
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </section>
