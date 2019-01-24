@@ -37,7 +37,8 @@
               "src/assets/vendor/tilt/tilt.jquery.min.js",
               "src/assets/vendor/bootstrap/js/popper.min.js",
               "node_modules/datatables.net/js/jquery.dataTables.min.js",
-              "src/assets/plugins/datatable/datatable.min.js"
+              "src/assets/plugins/datatable/datatable.min.js",
+              "node_modules/chart.js/src/chart.js"
             ]
           },
           "configurations": {

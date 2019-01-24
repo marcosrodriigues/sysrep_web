@@ -28,7 +28,10 @@ import { ListagemCaixinhaComponent } from './pages/caixinha/listagem-caixinha/li
 import { NovoCaixinhaComponent } from './pages/caixinha/novo-caixinha/novo-caixinha.component';
 import { VisualizarCaixinhaComponent } from './pages/caixinha/visualizar-caixinha/visualizar-caixinha.component';
 import { CaixinhaComponent } from './components/forms/caixinha/caixinha.component';
-import { ReceitaPresidenciaTableComponent } from './components/table/receita-presidencia-table/receita-presidencia-table.component'
+import { ReceitaPresidenciaTableComponent } from './components/table/receita-presidencia-table/receita-presidencia-table.component';
+import { ReceitaCaixinhaComponent } from './components/charts/receita-caixinha/receita-caixinha.component';
+import { DespesaCaixinhaComponent } from './components/charts/despesa-caixinha/despesa-caixinha.component'
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -58,11 +61,14 @@ import { ReceitaPresidenciaTableComponent } from './components/table/receita-pre
     VisualizarCaixinhaComponent,
     CaixinhaComponent,
     ReceitaPresidenciaTableComponent,
+    ReceitaCaixinhaComponent,
+    DespesaCaixinhaComponent,
   ],
   imports: [
     RoutingModule,
     BrowserModule,
-    TreeTableModule
+    TreeTableModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

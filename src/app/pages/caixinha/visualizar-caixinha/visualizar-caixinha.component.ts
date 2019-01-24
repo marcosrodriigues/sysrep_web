@@ -30,6 +30,8 @@ export class VisualizarCaixinhaComponent implements OnInit {
   }
   
   ngOnInit() {
+
+    
   }
 
 }
